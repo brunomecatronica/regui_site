@@ -100,7 +100,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 120px 0 80px;
+            padding: 84px 0 80px; /* Reduzido de 120px para 84px (30% de redução: 120 * 0.7 = 84) */
             text-align: center;
             color: white;
         }
@@ -122,12 +122,42 @@
         }
 
         .hero-logo {
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
 
         .hero-logo-img {
             height: 200px;
             width: auto;
+        }
+        
+        .hero-photo-wrapper {
+            margin: 2rem auto;
+            max-width: 800px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            position: relative;
+            display: block;
+        }
+        
+        /* Ajusta a altura do container para corresponder à parte visível (70%) */
+        .hero-photo-wrapper::before {
+            content: '';
+            display: block;
+            padding-bottom: 70%; /* Aumentado de 52.5% para 70% - container mais alto na vertical */
+        }
+        
+        .hero-photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center bottom;
+            transform: translateY(-30%); /* Move para cima removendo 30% superior */
         }
 
         .cta-button {
@@ -399,6 +429,12 @@
                 width: 80%;
                 max-width: 300px;
             }
+            
+            .hero-photo-wrapper {
+                width: 95%;
+                max-width: 600px;
+                margin: 1.5rem auto;
+            }
 
             .nav-links {
                 display: none;
@@ -480,6 +516,9 @@
                 <img src="logo_regui.png" alt="Regui 2026" class="hero-logo-img">
             </div>
             <p class="fade-in-up">Sistema Inteligente de Irrigação Automática com Monitoramento em Tempo Real</p>
+            <div class="hero-photo-wrapper fade-in-up">
+                <img src="foto_regui_01.png" alt="Regui Sistema" class="hero-photo">
+            </div>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
                 <a href="#features" class="cta-button fade-in-up" style="text-decoration: none;"><i class="fas fa-leaf"></i> Conheça os Recursos</a>
                 <a href="#architecture" class="cta-button fade-in-up" style="text-decoration: none;"><i class="fas fa-sitemap"></i> Ver Arquitetura</a>
