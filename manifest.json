@@ -1,0 +1,17 @@
+{
+  "name": "REGUI 2026 - Sistema de Irrigação Inteligente",
+  "short_name": "REGUI",
+  "description": "Sistema inteligente de irrigação automática com monitoramento em tempo real",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1E3A2E",
+  "theme_color": "#6BBD6E",
+  "icons": [
+    {
+      "src": "logo_regui.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
+
